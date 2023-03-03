@@ -1,0 +1,166 @@
+*,
+::before,
+::after {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+img {
+    width: 100%;
+    height: 100;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    padding: 15px 0;
+
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    color: gray;
+}
+
+.header_logo {
+    color: inherit;
+    text-decoration: none;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-height: 1230px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.hero_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax( 250px,1fr));
+    grid-gap: 10px;
+}
+
+.hero_about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero_title {
+    margin-bottom: 20px;
+
+    font-size: 40px;
+    line-height: 1.1;
+}
+
+.hero_subtitle {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.hero_links {
+    display: flex;
+}
+
+.hero_link {
+    margin-right: 10px;
+
+    font-size: 30px;
+    color: black;
+
+    transition: color 0.25s;
+}
+
+.hero_link:hover {
+    color: #fa3257;
+}
+
+.hero_box {
+    max-width: 1000px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero_box-img {
+    display: flex;
+    align-items: center;
+    animation: ava-animate 5s infinite alternate;
+
+    border: 10px solid #fff;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, .5);
+}
+@keyframes ava-animate {
+    0% {
+        border-radius: 94% 6% 95% 5% / 6% 86% 14% 94%;
+    }
+
+    25% {
+        border-radius: 80% 20% 75% 25% / 29% 60% 40% 71%;
+    }
+
+    50% {
+        border-radius: 31% 69% 29% 71% / 73% 26% 74% 27%;
+    }
+
+    75% {
+        border-radius: 16% 84% 10% 90% / 81% 13% 87% 19%;
+
+    }
+    100% {
+        border-radius: 7% 93% 5% 95% / 91% 8% 92% 9%;
+    }
+
+}
+
+@media screen and (max-width: 978px) {
+    .hero {
+        padding-top: 30px;
+    }
+
+    .hero_container {
+        grid-row-gap: 10px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .hero_subtitle {
+        font-size: 22px;
+        font-weight: 400;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-about {
+        text-align: center;
+    }
+
+    .hero-links {
+        justify-content: center;
+    }
+
+    .hero_box {
+        max-width: 500px;
+    }
+}
